@@ -1,0 +1,18 @@
+{
+	"fonts": {
+		"body": "",
+		"heading": "",
+		"monospace": ""
+	},
+	"fontWeights": {
+		"regular": 400,
+		"bold": 800
+	},
+	"fontSizes": {
+		"caption": 12,
+		"button": 14,
+		"body": 16,
+		"title": 20,
+		"subtitle": 14
+	}
+}
