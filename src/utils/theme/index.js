@@ -32,8 +32,6 @@ export const useTheme = () => {
 
     const transformedTheme = transformTheme(theme);
 
-    console.log('theme: ', transformedTheme);
-
     prevTheme.current = activeTheme;
 
     EStyleSheet.build(transformedTheme);
