@@ -10,11 +10,17 @@ export default EStyleSheet.create({
     paddingHorizontal: 16,
     height: 60,
   },
-  activeIcon: {backgroundColor: 'green', padding: 8, borderRadius: 5},
+  activeIcon: {
+    backgroundColor: '$colors.ui.secondary',
+    padding: 8,
+    borderRadius: 5,
+  },
   iconContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  tabBarTitle: {color: 'white', fontSize: 12},
+  tabBarTitle: {color: '$colors.text.primary', fontSize: 12},
+  iconFocused: {color: '$colors.ui.quaternary'},
+  iconWithoutFocus: {color: '$colors.ui.secondary'},
 });

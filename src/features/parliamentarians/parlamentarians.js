@@ -1,0 +1,16 @@
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {ParlamentariansScreen} from '../../screens/parlamentarians/parlamentarians.screen';
+
+const ParlamentariansStack = createStackNavigator();
+
+export const Parlamentarians = () => {
+  return (
+    <ParlamentariansStack.Navigator>
+      <ParlamentariansStack.Screen
+        name="parlamentarians-list"
+        component={ParlamentariansScreen}
+      />
+    </ParlamentariansStack.Navigator>
+  );
+};

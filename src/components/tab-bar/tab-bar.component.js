@@ -65,7 +65,7 @@ export const TabBar = ({state, descriptors, navigation}) => {
             <View style={[isFocused && styles.activeIcon]}>
               <Icons
                 name={TAB_ICONS[route.name]}
-                color={isFocused ? 'white' : 'green'}
+                style={isFocused ? styles.iconFocused : styles.iconWithoutFocus}
                 size={24}
               />
             </View>

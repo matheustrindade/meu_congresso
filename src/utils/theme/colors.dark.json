@@ -1,7 +1,7 @@
 {
 	"ui": {
 		"primary": "#000000",
-		"secondary": "#757575",
+		"secondary": "#009c3b",
 		"tertiary": "#F1F1F1",
 		"quaternary": "#FFFFFF",
 		"disabled": "#DEDEDE",
@@ -13,7 +13,7 @@
 		"secondary": "#F1F1F1"
 	},
 	"text": {
-		"primary": "#262626",
+		"primary": "#FFFFFF",
 		"secondary": "#757575",
 		"disabled": "#9C9C9C",
 		"inverse": "#FFFFFF",
