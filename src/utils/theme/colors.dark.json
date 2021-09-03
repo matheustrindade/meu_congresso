@@ -9,8 +9,8 @@
 		"success": "#138000"
 	},
 	"bg": {
-		"primary": "#FFFFFF",
-		"secondary": "#F1F1F1"
+		"primary": "#000000",
+		"secondary": "#A7A7A7"
 	},
 	"text": {
 		"primary": "#FFFFFF",
