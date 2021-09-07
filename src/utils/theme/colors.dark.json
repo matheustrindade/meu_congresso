@@ -2,7 +2,7 @@
 	"ui": {
 		"primary": "#000000",
 		"secondary": "#009c3b",
-		"tertiary": "#F1F1F1",
+		"tertiary": "#333333",
 		"quaternary": "#FFFFFF",
 		"disabled": "#DEDEDE",
 		"error": "#D0421B",

@@ -1,6 +1,7 @@
 import {useCallback, useMemo, useRef} from 'react';
 import spaces from './spaces.json';
 import fonts from './fonts.json';
+import sizes from './sizes.json';
 import colorsDark from './colors.dark.json';
 import colorsLight from './colors.light.json';
 import {useColorScheme} from 'react-native';
@@ -32,6 +33,7 @@ export const useTheme = (options = null) => {
       spaces,
       ...fonts,
       colors: activeTheme === 'dark' ? colorsDark : colorsLight,
+      sizes,
     };
 
     if (themeAsObject) {
