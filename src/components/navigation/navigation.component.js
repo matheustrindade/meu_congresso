@@ -16,7 +16,12 @@ const Tab = createBottomTabNavigator();
 
 export const Navigation = () => {
   const getTabBar = useCallback(props => <TabBar {...props} />, []);
-  const getScreenOptions = useCallback(() => ({headerShown: false}), []);
+  const getScreenOptions = useCallback(
+    () => ({
+      headerShown: false,
+    }),
+    [],
+  );
 
   return (
     <NavigationContainer>

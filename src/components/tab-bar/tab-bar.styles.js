@@ -20,7 +20,11 @@ export default EStyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  tabBarTitle: {color: '$colors.text.primary', fontSize: 12},
+  tabBarTitle: {
+    color: '$colors.text.primary',
+    fontSize: 12,
+    fontFamily: '$fontFamily.body',
+  },
   iconFocused: {color: '$colors.ui.quaternary'},
   iconWithoutFocus: {color: '$colors.ui.secondary'},
 });

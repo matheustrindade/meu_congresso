@@ -1,4 +1,4 @@
-import {useCallback, useRef} from 'react';
+import {useCallback, useMemo, useRef} from 'react';
 import spaces from './spaces.json';
 import fonts from './fonts.json';
 import colorsDark from './colors.dark.json';
@@ -6,9 +6,13 @@ import colorsLight from './colors.light.json';
 import {useColorScheme} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-export const useTheme = () => {
+export const useTheme = (options = null) => {
   const activeTheme = useColorScheme();
   let prevTheme = useRef(null);
+
+  const {themeAsObject} = useMemo(() => {
+    return options ?? {};
+  }, [options]);
 
   const transformTheme = useCallback(theme => {
     let transformedTheme = {};
@@ -30,12 +34,16 @@ export const useTheme = () => {
       colors: activeTheme === 'dark' ? colorsDark : colorsLight,
     };
 
+    if (themeAsObject) {
+      return theme;
+    }
+
     const transformedTheme = transformTheme(theme);
 
     prevTheme.current = activeTheme;
 
     EStyleSheet.build(transformedTheme);
-  }, [activeTheme, transformTheme]);
+  }, [activeTheme, transformTheme, themeAsObject]);
 
   return getTheme();
 };
