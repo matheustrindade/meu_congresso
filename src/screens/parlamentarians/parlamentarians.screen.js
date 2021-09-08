@@ -1,9 +1,13 @@
 import React from 'react';
 import {SectionList, Text, TouchableOpacity, View} from 'react-native';
+import {ChipFilter} from '../../components/chip-filter/chip-filter.component';
 import {ParlamentariansListItem} from '../../components/parlamentarians-list-item/parlamentarians-list-item.';
+import {SearchBar} from '../../components/searchbar/searchbar';
 import parlamentariansStyles from './parlamentarians.styles';
 export const ParlamentariansScreen = () => (
   <View style={parlamentariansStyles.container}>
+    <SearchBar />
+    <ChipFilter />
     <SectionList
       sections={[
         {

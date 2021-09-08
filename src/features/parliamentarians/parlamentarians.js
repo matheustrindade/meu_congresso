@@ -13,7 +13,7 @@ export const Parlamentarians = () => {
       <ParlamentariansStack.Screen
         name="parlamentarians-list"
         component={ParlamentariansScreen}
-        options={{title: 'congressistas'}}
+        options={{title: 'congressistas', headerShown: false}}
       />
     </ParlamentariansStack.Navigator>
   );
