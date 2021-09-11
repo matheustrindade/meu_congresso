@@ -30,6 +30,8 @@
 		C0A6AC568B834A629AB63B6F /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D613082C38F477B84C2008F /* Octicons.ttf */; };
 		015B36723A8340C2AB42CD58 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CA187E34008452C971B9D78 /* SimpleLineIcons.ttf */; };
 		4BC0F6953EEF46C7B21D613C /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51FBC8B3327F465FBA0048F5 /* Zocial.ttf */; };
+		D5C7CFA61D5D4C3A972179B7 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 120FA52A1FDA427A9C3D8EC2 /* Oswald-Medium.ttf */; };
+		B9CFEE2AD7FA442C9596958C /* PTSansNarrow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01EEC86CA13649259FCB2390 /* PTSansNarrow-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		1D613082C38F477B84C2008F /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4CA187E34008452C971B9D78 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		51FBC8B3327F465FBA0048F5 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		120FA52A1FDA427A9C3D8EC2 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; name = "Oswald-Medium.ttf"; path = "../src/assets/fonts/Oswald-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		01EEC86CA13649259FCB2390 /* PTSansNarrow-Regular.ttf */ = {isa = PBXFileReference; name = "PTSansNarrow-Regular.ttf"; path = "../src/assets/fonts/PTSansNarrow-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,8 @@
 				1D613082C38F477B84C2008F /* Octicons.ttf */,
 				4CA187E34008452C971B9D78 /* SimpleLineIcons.ttf */,
 				51FBC8B3327F465FBA0048F5 /* Zocial.ttf */,
+				120FA52A1FDA427A9C3D8EC2 /* Oswald-Medium.ttf */,
+				01EEC86CA13649259FCB2390 /* PTSansNarrow-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 				C0A6AC568B834A629AB63B6F /* Octicons.ttf in Resources */,
 				015B36723A8340C2AB42CD58 /* SimpleLineIcons.ttf in Resources */,
 				4BC0F6953EEF46C7B21D613C /* Zocial.ttf in Resources */,
+				D5C7CFA61D5D4C3A972179B7 /* Oswald-Medium.ttf in Resources */,
+				B9CFEE2AD7FA442C9596958C /* PTSansNarrow-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

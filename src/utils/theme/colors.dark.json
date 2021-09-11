@@ -4,7 +4,7 @@
 		"secondary": "#009c3b",
 		"tertiary": "#333333",
 		"quaternary": "#FFFFFF",
-		"disabled": "#DEDEDE",
+		"disabled": "#a8a8a8",
 		"error": "#D0421B",
 		"success": "#138000"
 	},

@@ -1,7 +1,8 @@
-import React, {useCallback} from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {Animated, Text, TouchableOpacity, View} from 'react-native';
 import Icons from 'react-native-vector-icons/FontAwesome5';
-import styles from './tab-bar.styles';
+import {useCheckKeyboardOpened} from '../../hooks/kayboard-opened';
+import styles, {hiddenAnimation} from './tab-bar.styles';
 
 const TAB_ICONS = {
   home: 'home',
@@ -11,6 +12,18 @@ const TAB_ICONS = {
 };
 
 export const TabBar = ({state, descriptors, navigation}) => {
+  const isKeyboardOpen = useCheckKeyboardOpened();
+
+  const animation = React.useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(animation, {
+      toValue: isKeyboardOpen ? 60 : 0,
+      duration: 300,
+      useNativeDriver: true,
+    }).start();
+  }, [isKeyboardOpen, animation]);
+
   const onPress = useCallback(
     ({route, isFocused}) =>
       () => {
@@ -40,7 +53,8 @@ export const TabBar = ({state, descriptors, navigation}) => {
   );
 
   return (
-    <View style={styles.tabContainer}>
+    <Animated.View
+      style={[styles.tabContainer, hiddenAnimation(animation).hidden]}>
       {state.routes.map((route, index) => {
         const {options} = descriptors[route.key];
         const label =
@@ -73,6 +87,6 @@ export const TabBar = ({state, descriptors, navigation}) => {
           </TouchableOpacity>
         );
       })}
-    </View>
+    </Animated.View>
   );
 };

@@ -4,5 +4,7 @@ export default EStyleSheet.create({
   pageContainer: {
     flex: 1,
     backgroundColor: '$colors.ui.primary',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

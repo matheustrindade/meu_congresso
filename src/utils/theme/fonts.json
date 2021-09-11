@@ -17,6 +17,7 @@
 	},
 	"fontFamily": {
 		"body": "Lato-Regular",
-		"monospace": "UbuntuMono-Regular"
+		"monospace": "UbuntuMono-Regular",
+		"heading": "PTSansNarrow-Regular"
 	}
 }

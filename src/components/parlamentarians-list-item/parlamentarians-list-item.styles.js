@@ -27,7 +27,24 @@ export default EStyleSheet.create({
     fontFamily: '$fontFamily.body',
   },
   party: {
-    color: '$colors.text.primary',
+    color: '$colors.text.secondary',
     fontFamily: '$fontFamily.monospace',
+  },
+  favouriteContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    paddingRight: '$spaces.md',
+  },
+  favourite: {
+    color: '$colors.ui.secondary',
+  },
+  notFavourite: {
+    color: '$colors.ui.disabled',
+  },
+  role: {
+    color: '$colors.text.primary',
+    fontFamily: '$fontFamily.body',
+    fontSize: '$sizes.md',
   },
 });

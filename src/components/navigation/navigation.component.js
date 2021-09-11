@@ -1,16 +1,42 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {Text, View} from 'react-native';
+import {Animated, Text, TouchableOpacity, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import styles from './navigation.styles';
 import {TabBar} from '../tab-bar/tab-bar.component';
 import {Parlamentarians} from '../../features/parliamentarians/parlamentarians';
 
-const Home = () => (
-  <View style={styles.pageContainer}>
-    <Text style={styles.title}>meu congresso</Text>
-  </View>
-);
+const Home = () => {
+  let scale = React.useRef(new Animated.Value(1)).current;
+  const [shrink, setShrink] = React.useState(true);
+
+  const animateView = useCallback(() => {
+    Animated.timing(scale, {
+      toValue: shrink ? 1.1 : 1,
+      duration: 500,
+      useNativeDriver: true,
+    }).start(() => {
+      setShrink(!shrink);
+    });
+  }, [scale, shrink]);
+
+  return (
+    <View style={styles.pageContainer}>
+      <Animated.View
+        style={{
+          backgroundColor: 'red',
+          padding: 20,
+          transform: [{scaleX: scale}],
+        }}>
+        <Text style={{color: 'white'}}>view animada hahaha</Text>
+      </Animated.View>
+      <Text style={styles.title}>meu congresso</Text>
+      <TouchableOpacity onPress={animateView}>
+        <Text style={{color: 'white'}}>press me</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 const Tab = createBottomTabNavigator();
 

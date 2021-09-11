@@ -1,5 +1,13 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
+export const hiddenAnimation = animation => {
+  return EStyleSheet.create({
+    hidden: {
+      transform: [{translateY: animation}],
+    },
+  });
+};
+
 export default EStyleSheet.create({
   tabContainer: {
     backgroundColor: '$colors.ui.primary',
