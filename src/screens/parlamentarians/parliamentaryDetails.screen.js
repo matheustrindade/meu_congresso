@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import parliamentaryDetailsStyles from './parliamentaryDetails.styles';
 import {Image} from '../../components/image/image';
 import {Separator} from '../../components/ui/separator.component';
@@ -62,31 +62,57 @@ export const ParliamentaryDetails = () => {
         </View>
       </View>
       <Separator />
-      <View>
-        <Text>sobre</Text>
-        <Text>idade</Text>
-        <Text>data de nascimento</Text>
-        <Text>estado de nascimento</Text>
+      <View style={parliamentaryDetailsStyles.section}>
+        <Text style={parliamentaryDetailsStyles.sectionTitle}>sobre</Text>
+        <View>
+          <Icon
+            name="birthday-cake"
+            size={20}
+            style={parliamentaryDetailsStyles.aboutIcon}
+          />
+          <Text>data de nascimento</Text>
+          <Text>46 anos</Text>
+        </View>
+        <View>
+          <Icon
+            name="globe-americas"
+            size={20}
+            style={parliamentaryDetailsStyles.aboutIcon}
+          />
+          <Text>estado de nascimento</Text>
+        </View>
+        <View>
+          <Icon
+            name="graduation-cap"
+            size={20}
+            style={parliamentaryDetailsStyles.aboutIcon}
+          />
+          <Text>Formação</Text>
+        </View>
+        <TouchableOpacity>
+          <Icon
+            name="at"
+            size={20}
+            style={parliamentaryDetailsStyles.aboutIcon}
+          />
+          <Text>contato</Text>
+        </TouchableOpacity>
       </View>
-      <Separator />
-      <View>
+      <View style={parliamentaryDetailsStyles.section}>
+        <View>
+          <Text>Votos</Text>
+        </View>
+        <View>
+          <Text>Projetos</Text>
+        </View>
+      </View>
+      <View style={parliamentaryDetailsStyles.section}>
         <Text>Quantidade de votos - última eleição</Text>
       </View>
-      <Separator />
-      <View>
-        <Text>Formação</Text>
-      </View>
-      <Separator />
-      <View>
+      <View style={parliamentaryDetailsStyles.section}>
         <Text>alinhamento com o governo</Text>
       </View>
       <Separator />
-      <View>
-        <Text>Votos</Text>
-      </View>
-      <View>
-        <Text>Projetos</Text>
-      </View>
     </ScrollView>
   );
 };

@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import {Animated, Text, TouchableOpacity, View} from 'react-native';
 import Icons from 'react-native-vector-icons/FontAwesome5';
 import {useCheckKeyboardOpened} from '../../hooks/kayboard-opened';
@@ -14,7 +14,7 @@ const TAB_ICONS = {
 export const TabBar = ({state, descriptors, navigation}) => {
   const isKeyboardOpen = useCheckKeyboardOpened();
 
-  const animation = React.useRef(new Animated.Value(0)).current;
+  const animation = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     Animated.timing(animation, {

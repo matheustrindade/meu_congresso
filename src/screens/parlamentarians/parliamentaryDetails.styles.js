@@ -4,12 +4,12 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 export default EStyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '$colors.bg.primary',
+    backgroundColor: '$colors.bg.secondary',
     position: 'relative',
     zIndex: 1,
   },
   header: {
-    backgroundColor: 'transparent',
+    backgroundColor: '$colors.bg.primary',
     height: 160,
     position: 'relative',
     width: Dimensions.get('window').width,
@@ -38,6 +38,7 @@ export default EStyleSheet.create({
     fontSize: '$sizes.md + $sizes.xs',
   },
   identification: {
+    backgroundColor: '$colors.bg.primary',
     paddingBottom: '$spaces.md',
     paddingHorizontal: '$spaces.md',
   },
@@ -55,5 +56,19 @@ export default EStyleSheet.create({
   ableToRunIcon: {
     color: '$colors.ui.success',
     marginLeft: '$spaces.sm',
+  },
+  sectionTitle: {
+    color: '$colors.text.primary',
+    fontFamily: '$fontFamily.heading',
+    fontSize: '$fontSizes.title',
+  },
+  section: {
+    backgroundColor: '$colors.bg.primary',
+    paddingHorizontal: '$spaces.md + $spaces.xs',
+    paddingVertical: '$spaces.md',
+    marginTop: '$spaces.md',
+  },
+  aboutIcon: {
+    color: '$colors.ui.quaternary',
   },
 });
