@@ -44,6 +44,7 @@ export default EStyleSheet.create({
   },
   commonText: {
     color: '$colors.text.primary',
+    fontSize: '$fontSizes.body',
   },
   ableToRun: {
     alignItems: 'center',
@@ -61,6 +62,7 @@ export default EStyleSheet.create({
     color: '$colors.text.primary',
     fontFamily: '$fontFamily.heading',
     fontSize: '$fontSizes.title',
+    marginBottom: '$spaces.sm',
   },
   section: {
     backgroundColor: '$colors.bg.primary',
@@ -70,5 +72,27 @@ export default EStyleSheet.create({
   },
   aboutIcon: {
     color: '$colors.ui.quaternary',
+  },
+  iconContainer: {
+    alignItems: 'center',
+    backgroundColor: '$colors.ui.tertiary',
+    borderRadius: 50,
+    height: '$sizes.lg + $sizes.sm',
+    justifyContent: 'center',
+    padding: '$spaces.sm + $spaces.xs',
+    width: '$sizes.lg + $sizes.sm',
+  },
+  sectionInfoContainer: {
+    flexDirection: 'row',
+  },
+  info: {
+    color: '$colors.text.primary',
+  },
+  infoTitle: {
+    fontWeight: 'normal',
+  },
+  infoText: {
+    fontSize: '$fontSizes.body',
+    fontWeight: 'bold',
   },
 });

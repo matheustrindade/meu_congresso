@@ -5,6 +5,7 @@ import {Image} from '../../components/image/image';
 import {Separator} from '../../components/ui/separator.component';
 import AppStyles from '../../../App.styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import spaces from '../../utils/theme/spaces.json';
 export const ParliamentaryDetails = () => {
   return (
     <ScrollView style={parliamentaryDetailsStyles.container}>
@@ -56,7 +57,7 @@ export const ParliamentaryDetails = () => {
           </Text>
           <Icon
             name="check"
-            size={20}
+            size={spaces.md}
             style={parliamentaryDetailsStyles.ableToRunIcon}
           />
         </View>
@@ -64,19 +65,36 @@ export const ParliamentaryDetails = () => {
       <Separator />
       <View style={parliamentaryDetailsStyles.section}>
         <Text style={parliamentaryDetailsStyles.sectionTitle}>sobre</Text>
-        <View>
-          <Icon
-            name="birthday-cake"
-            size={20}
-            style={parliamentaryDetailsStyles.aboutIcon}
-          />
-          <Text>data de nascimento</Text>
-          <Text>46 anos</Text>
+        <View style={parliamentaryDetailsStyles.sectionInfoContainer}>
+          <View style={parliamentaryDetailsStyles.iconContainer}>
+            <Icon
+              name="birthday-cake"
+              size={spaces.md}
+              style={parliamentaryDetailsStyles.aboutIcon}
+            />
+          </View>
+          <View>
+            <Text
+              style={[
+                parliamentaryDetailsStyles.info,
+                parliamentaryDetailsStyles.infoText,
+                parliamentaryDetailsStyles.infoTitle,
+              ]}>
+              data de nascimento
+            </Text>
+            <Text
+              style={[
+                parliamentaryDetailsStyles.info,
+                parliamentaryDetailsStyles.infoText,
+              ]}>
+              20/06/1966 - 55 anos
+            </Text>
+          </View>
         </View>
         <View>
           <Icon
             name="globe-americas"
-            size={20}
+            size={spaces.md}
             style={parliamentaryDetailsStyles.aboutIcon}
           />
           <Text>estado de nascimento</Text>
@@ -84,7 +102,7 @@ export const ParliamentaryDetails = () => {
         <View>
           <Icon
             name="graduation-cap"
-            size={20}
+            size={spaces.md}
             style={parliamentaryDetailsStyles.aboutIcon}
           />
           <Text>Formação</Text>
@@ -92,7 +110,7 @@ export const ParliamentaryDetails = () => {
         <TouchableOpacity>
           <Icon
             name="at"
-            size={20}
+            size={spaces.md}
             style={parliamentaryDetailsStyles.aboutIcon}
           />
           <Text>contato</Text>
