@@ -6,6 +6,7 @@ import {Separator} from '../../components/ui/separator.component';
 import AppStyles from '../../../App.styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import spaces from '../../utils/theme/spaces.json';
+import {Spacer} from '../../components/ui/spacer.component';
 export const ParliamentaryDetails = () => {
   return (
     <ScrollView style={parliamentaryDetailsStyles.container}>
@@ -73,7 +74,7 @@ export const ParliamentaryDetails = () => {
               style={parliamentaryDetailsStyles.aboutIcon}
             />
           </View>
-          <View>
+          <Spacer orientation="pl-sm" style={parliamentaryDetailsStyles.test}>
             <Text
               style={[
                 parliamentaryDetailsStyles.info,
@@ -89,7 +90,7 @@ export const ParliamentaryDetails = () => {
               ]}>
               20/06/1966 - 55 anos
             </Text>
-          </View>
+          </Spacer>
         </View>
         <View>
           <Icon

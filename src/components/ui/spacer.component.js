@@ -1,8 +1,7 @@
 import React, {useMemo} from 'react';
 import {View} from 'react-native';
 import spaces from '../../utils/theme/spaces.json';
-import spacerStyles from './spacer.styles';
-export const Spacer = ({children, orientation = ''}) => {
+export const Spacer = ({children, orientation = '', style = null}) => {
   const styles = useMemo(() => {
     if (!orientation) {
       return [];
@@ -62,10 +61,20 @@ export const Spacer = ({children, orientation = ''}) => {
 
         return null;
       })
-      .filter(c => !!c);
+      .filter(c => !!c)
+      .reduce((acum, curr) => {
+        return {
+          ...acum,
+          ...curr,
+        };
+      }, {});
 
     return classes;
   }, [orientation]);
 
-  return <View style={spacerStyles(styles)}>{children}</View>;
+  return (
+    <View style={[styles, ...(Array.isArray(style) ? style : [style])]}>
+      {children}
+    </View>
+  );
 };
