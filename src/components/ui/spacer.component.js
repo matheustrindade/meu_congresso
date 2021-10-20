@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {View} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import spaces from '../../utils/theme/spaces.json';
 export const Spacer = ({children, orientation = '', style = null}) => {
   const styles = useMemo(() => {
@@ -73,8 +73,8 @@ export const Spacer = ({children, orientation = '', style = null}) => {
   }, [orientation]);
 
   return (
-    <View style={[styles, ...(Array.isArray(style) ? style : [style])]}>
+    <SafeAreaView style={[styles, ...(Array.isArray(style) ? style : [style])]}>
       {children}
-    </View>
+    </SafeAreaView>
   );
 };
