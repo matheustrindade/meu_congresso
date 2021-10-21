@@ -1,5 +1,11 @@
 import React, {useCallback} from 'react';
-import {ScrollView, TouchableOpacity, View} from 'react-native';
+import {
+  ScrollView,
+  TouchableOpacity,
+  View,
+  Linking,
+  ToastAndroid,
+} from 'react-native';
 import parliamentaryDetailsStyles from './parliamentaryDetails.styles';
 import {Image} from '../../components/image/image';
 import {Separator} from '../../components/ui/separator.component';
@@ -8,9 +14,18 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import spaces from '../../utils/theme/spaces.json';
 import {Spacer, Text} from '../../components/ui';
 export const ParliamentaryDetails = () => {
-  const openEmailApp = useCallback(() => {
-    //assert aqui
-  }, []);
+  const openEmailApp = useCallback(
+    email => () => {
+      const url = `mailto:${email}`;
+      const canOpenEmail = Linking.canOpenURL(url);
+      if (canOpenEmail) {
+        Linking.openURL(url);
+      } else {
+        ToastAndroid.show('Não foi possível abrir email', ToastAndroid.SHORT);
+      }
+    },
+    [],
+  );
 
   return (
     <ScrollView style={parliamentaryDetailsStyles.container}>
@@ -155,7 +170,7 @@ export const ParliamentaryDetails = () => {
           </Spacer>
         </Spacer>
         <TouchableOpacity
-          onPress={openEmailApp}
+          onPress={openEmailApp('fabiano.contarato@algo.com')}
           style={parliamentaryDetailsStyles.sectionInfoContainer}>
           <View style={parliamentaryDetailsStyles.iconContainer}>
             <Icon
