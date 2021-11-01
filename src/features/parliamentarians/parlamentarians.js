@@ -1,5 +1,5 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {ParlamentariansScreen} from '../../screens/parlamentarians/parlamentarians.screen';
 import {useHeaderStylesOptions} from '../../hooks/style-hooks';
 import {ParliamentaryDetails} from '../../screens/parlamentarians/parliamentaryDetails.screen';
@@ -9,7 +9,11 @@ export const Parlamentarians = () => {
   const headerStyleOptions = useHeaderStylesOptions();
 
   return (
-    <ParlamentariansStack.Navigator screenOptions={headerStyleOptions}>
+    <ParlamentariansStack.Navigator
+      screenOptions={{
+        ...headerStyleOptions,
+        ...TransitionPresets.FadeFromBottomAndroid,
+      }}>
       <ParlamentariansStack.Screen
         name="parlamentarians-list"
         component={ParlamentariansScreen}
