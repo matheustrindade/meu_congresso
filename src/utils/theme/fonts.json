@@ -5,8 +5,8 @@
 		"monospace": ""
 	},
 	"fontWeights": {
-		"regular": 400,
-		"bold": 800
+		"regular": "400",
+		"bold": "900"
 	},
 	"fontSizes": {
 		"caption": 12,
